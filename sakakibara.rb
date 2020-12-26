@@ -25,6 +25,7 @@ class Bingo
     a = 0
     #game_timeはゲーム数
     game_time = 0
+    #リーチのカウント
     reach_count = 0
     bingo_count = 0
     b_count = 0
