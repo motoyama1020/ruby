@@ -29,27 +29,29 @@ class Bingo
     reach_count = 0
     #ビンゴのカウント
     bingo_count = 0
-    #B列のカウント
+    #B列の穴空きカウント
     b_count = 0
-    #I列のカウント
+    #I列の穴空きカウント
     i_count = 0
-    #N列のカウント
+    #N列の穴空きカウント
     n_count = 0
-    #G列のカウント
+    #G列の穴空きカウント
     g_count = 0
-    #O列のカウント
+    #O列の穴空きカウント
     o_count = 0
-    #1行目のカウント
+    #1行目の穴空きカウント
     first_count  = 0
-    #2行目のカウント
+    #2行目の穴空きカウント
     second_count = 0
-    #3行目のカウント
+    #3行目の穴空きカウント
     third_count  = 0
-    #4行目のカウント
+    #4行目の穴空きカウント
     fourth_count = 0
-    #5行目のカウント
+    #5行目の穴空きカウント
     fifth_count  = 0
+    #\上の穴空きカウント
     b_slash_count = 0
+    #/上の穴空きカウント
     slash_count = 0
     first_count_check  = 0
     second_count_check = 0
