@@ -1,15 +1,15 @@
 class Bingo
-  @numbers = []
+  @bingo_card = []
   @choice_number = []
 
   def initialize
     #1~75の配列を15刻みで区切る
-    @numbers = (1..75).each_slice(15).map do |array|
+    @bingo_card = (1..75).each_slice(15).map do |array|
       #区切られた配列からさらにランダムに5個の数値を取得する
       array.sample(5)
     end
     #カード中央をFREEという文字に置き換える
-    @numbers[2][2] = "FREE"
+    @bingo_card[2][2] = "FREE"
     #1~75の配列を作る
     choice_number = (1..75).to_a
     #配列からランダムに75個の数値を取得する
@@ -27,16 +27,27 @@ class Bingo
     game_time = 0
     #リーチのカウント
     reach_count = 0
+    #ビンゴのカウント
     bingo_count = 0
+    #B列のカウント
     b_count = 0
+    #I列のカウント
     i_count = 0
+    #N列のカウント
     n_count = 0
+    #G列のカウント
     g_count = 0
+    #O列のカウント
     o_count = 0
+    #1行目のカウント
     first_count  = 0
+    #2行目のカウント
     second_count = 0
+    #3行目のカウント
     third_count  = 0
+    #4行目のカウント
     fourth_count = 0
+    #5行目のカウント
     fifth_count  = 0
     b_slash_count = 0
     slash_count = 0
@@ -57,11 +68,12 @@ class Bingo
     #75回繰り返す
     while a < 75  do
       game_time += 1
-      #bingo_ballという配列に
+      #bingo_ball配列に今回引いたボールの番号を入れる
       bingo_ball << generate_number[a]
+      #ゲーム数と今回引いたボールの番号を表示する
       puts "ball[#{game_time}]:#{bingo_ball[a]}"
       y_position = 0
-      @numbers.transpose.each do |array|
+      @bingo_card.transpose.each do |array|
         y_position += 1
         x_position = 0
         array.each do |n|
