@@ -80,8 +80,11 @@ class Bingo
         x_position = 0
         array.each do |n|
           x_position += 1
+          #bingo_ball配列にbingo_cardの数値が入っていたら
           if bingo_ball.include?(n)
+            #first_check配列にbingo_cardの数値が入っていなかったら
             unless first_check.include?(n)
+              #一度引いたボールの数値をfirst_check配列に入れる
               first_check << n
               # 縦のカウンター
               if y_position == 1
