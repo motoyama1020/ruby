@@ -162,24 +162,30 @@ class Bingo
                 slash_count += 1
               end
             end
-            #10以下の数値に0をつける
             if n < 10
+              #該当した場合、10より小さい数値は(0)をつける
               print n.to_s.rjust(3, "(0") + ")"
             else
+              #該当した場合、10以上の数値は()をつける
               print n.to_s.rjust(3, "(") + ")"
             end
+          #bingo_ball配列にbingo_cardの数値が入っていなかったら
           else
+            #FREE該当時のFREE文字の表示
             if n == "FREE"
-              print n.to_s.rjust(3, " ")
+              print "FREE"
             else
               if n < 10
+                #該当なしの場合,10より小さい数値は前に0＆後ろに空白を入れる
                 print n.to_s.rjust(3, " 0") + " "
               else
+                #該当なしの場合,10以上の数値は前後に空白を入れる
                 print n.to_s.rjust(3, " ") + " "
               end
             end
           end
         end
+        #5x5で並ぶ様にする
         puts
       end
       # 縦のリーチカウンター
