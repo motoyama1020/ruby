@@ -185,7 +185,7 @@ class Bingo
             end
           end
         end
-        #5x5で並ぶ様にする
+        #改行させ、5x5で並ぶ様にする
         puts
       end
       # 縦のリーチカウンター
@@ -302,8 +302,13 @@ class Bingo
         bingo_count += 1
       end
 
+      #改行
+      puts
+      #リーチのカウントを表示
       puts "REACH: #{reach_count}"
+      #ビンゴのカウントを表示
       puts "BINGO: #{bingo_count}"
+      #区切り線の表示
       puts "--------------------"
       if bingo_count > 0
         break
