@@ -22,6 +22,7 @@ class Bingo
   end
 
   def bingo_start
+    #繰り返し数
     a = 0
     #game_timeはゲーム数
     game_time = 0
@@ -310,9 +311,12 @@ class Bingo
       puts "BINGO: #{bingo_count}"
       #区切り線の表示
       puts "--------------------"
+
+      #ビンゴのカウントが1以上になったら終了する
       if bingo_count > 0
         break
       end
+      #繰り返し数に1足す
       a += 1
     end
   end
