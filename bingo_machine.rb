@@ -86,7 +86,8 @@ class Bingo
             unless first_check.include?(n)
               #一度引いたボールの数値をfirst_check配列に入れる
               first_check << n
-              # 縦のカウンター
+              #縦のカウンター
+              #の
               if y_position == 1
                 first_count += 1
               end
@@ -161,6 +162,7 @@ class Bingo
                 slash_count += 1
               end
             end
+            #10以下の数値に0をつける
             if n < 10
               print n.to_s.rjust(3, "(0") + ")"
             else
