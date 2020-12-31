@@ -16,11 +16,6 @@ class Bingo
     @array_number = choice_number.sample(75)
   end
 
-  def generate_number
-    #16行目、配列からランダムに75個の数値を取得する
-    @array_number
-  end
-
   def bingo_start
     #繰り返し数
     a = 0
@@ -72,7 +67,7 @@ class Bingo
     while a < 75  do
       game_time += 1
       #bingo_ball配列に今回引いたボールの番号を入れる
-      bingo_ball << generate_number[a]
+      bingo_ball << @array_number[a]
       #ゲーム数と今回引いたボールの番号を表示する
       puts "ball[#{game_time}]:#{bingo_ball[a]}"
       y_position = 0
