@@ -61,45 +61,54 @@ class Bingo
     o_count_check = 0
     b_slash_count_check = 0
     slash_count_check = 0
+    #引いたボールの番号を入れていく配列
     bingo_ball = []
+    #ビンゴカードの数値を入れていく配列
     first_check = []
     #75回繰り返す
     while a < 75  do
+      #ゲーム数を１ずつ足していく
       game_time += 1
       #bingo_ball配列に今回引いたボールの番号を入れる
       bingo_ball << @array_number[a]
       #ゲーム数と今回引いたボールの番号を表示する
       puts "ball[#{game_time}]:#{bingo_ball[a]}"
+      
+      #＜ビンゴカードの出力コード＞
       y_position = 0
       @bingo_card.transpose.each do |array|
         y_position += 1
         x_position = 0
         array.each do |n|
           x_position += 1
-          #bingo_ball配列にbingo_cardの数値が入っていたら
+          #カードの数値がボールの数値と一致していたら
           if bingo_ball.include?(n)
-            #first_check配列にbingo_cardの数値が入っていなかったら
+            #カードの数値が一度もチェックされていなかったら
             unless first_check.include?(n)
-              #一度引いたボールの数値をfirst_check配列に入れる
+              #カードの数値をfirst_checkに入れる
               first_check << n
               #縦のカウンター
-              #の
+              #座標(1,1)の数値が該当していたらfirst_countを+1する
               if y_position == 1
                 first_count += 1
               end
 
+              #座標(1,2)の数値が該当していたらsecond_countを+1する
               if y_position == 2
                 second_count += 1
               end
 
+              #座標(1,3)の数値が該当していたらthird_countを+1する
               if y_position == 3
                 third_count += 1
               end
 
+              #座標(1,4)の数値が該当していたらfourth_countを+1する
               if y_position == 4
                 fourth_count += 1
               end
 
+              #座標(1,5)の数値が該当していたらfifth_countを+1する
               if y_position == 5
                 fifth_count += 1
               end
@@ -184,6 +193,8 @@ class Bingo
         #改行させ、5x5で並ぶ様にする
         puts
       end
+      #＜/ビンゴカードの出力コード＞
+
       # 縦のリーチカウンター
       if first_count > 3 && first_count_check == 0
         first_count_check = 1
