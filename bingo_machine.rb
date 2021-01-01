@@ -88,81 +88,94 @@ class Bingo
               #カードの数値をfirst_checkに入れる
               first_check << n
               #縦のカウンター
-              #座標(1,1)の数値が該当していたらfirst_countを+1する
+              #座標(x,1)の数値が該当していたらfirst_countを+1する
               if y_position == 1
                 first_count += 1
               end
 
-              #座標(1,2)の数値が該当していたらsecond_countを+1する
+              #座標(x,2)の数値が該当していたらsecond_countを+1する
               if y_position == 2
                 second_count += 1
               end
 
-              #座標(1,3)の数値が該当していたらthird_countを+1する
+              #座標(x,3)の数値が該当していたらthird_countを+1する
               if y_position == 3
                 third_count += 1
               end
 
-              #座標(1,4)の数値が該当していたらfourth_countを+1する
+              #座標(x,4)の数値が該当していたらfourth_countを+1する
               if y_position == 4
                 fourth_count += 1
               end
 
-              #座標(1,5)の数値が該当していたらfifth_countを+1する
+              #座標(x,5)の数値が該当していたらfifth_countを+1する
               if y_position == 5
                 fifth_count += 1
               end
 
-              # 横のカウンター
+              #横のカウンター
+              #座標(1,y)の数値が該当していたらb_countを+1する
               if x_position == 1
                 b_count += 1
               end
 
+              #座標(2,y)の数値が該当していたらi_countを+1する
               if x_position == 2
                 i_count += 1
               end
 
+              #座標(3,y)の数値が該当していたらn_countを+1する
               if x_position == 3
                 n_count += 1
               end
 
+              #座標(4,y)の数値が該当していたらg_countを+1する
               if x_position == 4
                 g_count += 1
               end
 
+              #座標(5,y)の数値が該当していたらo_countを+1する
               if x_position == 5
                 o_count += 1
               end
 
               # 斜めのカウンター
+              #座標(1,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 1
                 b_slash_count += 1
               end
 
+              #座標(2,2)の数値が該当していたらb_slash_countを+1する
               if y_position == 2 && x_position == 2
                 b_slash_count += 1
               end
 
+              #座標(4,4)の数値が該当していたらb_slash_countを+1する
               if y_position == 4 && x_position == 4
                 b_slash_count += 1
               end
 
+              #座標(5,5)の数値が該当していたらb_slash_countを+1する
               if y_position == 5 && x_position == 5
                 b_slash_count += 1
               end
 
+              #座標(5,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 5
                 slash_count += 1
               end
 
+              #座標(4,2)の数値が該当していたらb_slash_countを+1する
               if y_position == 2 && x_position == 4
                 slash_count += 1
               end
 
+              #座標(2,4)の数値が該当していたらb_slash_countを+1する
               if y_position == 4 && x_position == 2
                 slash_count += 1
               end
 
+              #座標(1,5)の数値が該当していたらb_slash_countを+1する
               if y_position == 5 && x_position == 1
                 slash_count += 1
               end
