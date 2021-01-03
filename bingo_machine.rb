@@ -139,7 +139,7 @@ class Bingo
                 o_count += 1
               end
 
-              # 斜めのカウンター
+              #斜め(\)のカウンター
               #座標(1,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 1
                 b_slash_count += 1
@@ -160,6 +160,7 @@ class Bingo
                 b_slash_count += 1
               end
 
+              #斜め(/)のカウンター
               #座標(5,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 5
                 slash_count += 1
