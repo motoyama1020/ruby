@@ -209,7 +209,7 @@ class Bingo
       end
       #＜/ビンゴカードの出力コード＞
 
-      # 縦のリーチカウンター
+      #縦のリーチカウンター
       if first_count > 3 && first_count_check == 0
         first_count_check = 1
         reach_count += 1
