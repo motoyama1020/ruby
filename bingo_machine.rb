@@ -87,7 +87,7 @@ class Bingo
             unless first_check.include?(n)
               #カードの数値をfirst_checkに入れる
               first_check << n
-              #縦のカウンター
+              #縦の一致カウンター
               #座標(x,1)の数値が該当していたらfirst_countを+1する
               if y_position == 1
                 first_count += 1
@@ -113,7 +113,7 @@ class Bingo
                 fifth_count += 1
               end
 
-              #横のカウンター
+              #横の一致カウンター
               #座標(1,y)の数値が該当していたらb_countを+1する
               if x_position == 1
                 b_count += 1
@@ -139,7 +139,7 @@ class Bingo
                 o_count += 1
               end
 
-              #斜め(\)のカウンター
+              #斜め(\)の一致カウンター
               #座標(1,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 1
                 b_slash_count += 1
@@ -160,7 +160,7 @@ class Bingo
                 b_slash_count += 1
               end
 
-              #斜め(/)のカウンター
+              #斜め(/)の一致カウンター
               #座標(5,1)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 5
                 slash_count += 1
@@ -188,7 +188,7 @@ class Bingo
               #該当した場合、10以上の数値は()をつける
               print n.to_s.rjust(3, "(") + ")"
             end
-          #bingo_ball配列にbingo_cardの数値が入っていなかったら
+          #カードの数値がボールの数値と一致していなかったら
           else
             #FREE該当時のFREE文字の表示
             if n == "FREE"
