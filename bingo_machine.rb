@@ -87,54 +87,54 @@ class Bingo
             unless first_check.include?(n)
               #カードの数値をfirst_checkに入れる
               first_check << n
-              #縦の一致カウンター
-              #座標(x,1)の数値が該当していたらfirst_countを+1する
+              #横の一致カウンター
+              #1行目の数値が該当していたらfirst_countを+1する
               if y_position == 1
                 first_count += 1
               end
 
-              #座標(x,2)の数値が該当していたらsecond_countを+1する
+              #2行目の数値が該当していたらsecond_countを+1する
               if y_position == 2
                 second_count += 1
               end
 
-              #座標(x,3)の数値が該当していたらthird_countを+1する
+              #3行目の数値が該当していたらthird_countを+1する
               if y_position == 3
                 third_count += 1
               end
 
-              #座標(x,4)の数値が該当していたらfourth_countを+1する
+              #4行目の数値が該当していたらfourth_countを+1する
               if y_position == 4
                 fourth_count += 1
               end
 
-              #座標(x,5)の数値が該当していたらfifth_countを+1する
+              #5行目の数値が該当していたらfifth_countを+1する
               if y_position == 5
                 fifth_count += 1
               end
 
-              #横の一致カウンター
-              #座標(1,y)の数値が該当していたらb_countを+1する
+              #縦の一致カウンター
+              #1列目の数値が該当していたらb_countを+1する
               if x_position == 1
                 b_count += 1
               end
 
-              #座標(2,y)の数値が該当していたらi_countを+1する
+              #2列目の数値が該当していたらi_countを+1する
               if x_position == 2
                 i_count += 1
               end
 
-              #座標(3,y)の数値が該当していたらn_countを+1する
+              #3列目の数値が該当していたらn_countを+1する
               if x_position == 3
                 n_count += 1
               end
 
-              #座標(4,y)の数値が該当していたらg_countを+1する
+              #4列目の数値が該当していたらg_countを+1する
               if x_position == 4
                 g_count += 1
               end
 
-              #座標(5,y)の数値が該当していたらo_countを+1する
+              #5列目の数値が該当していたらo_countを+1する
               if x_position == 5
                 o_count += 1
               end
@@ -209,8 +209,10 @@ class Bingo
       end
       #＜/ビンゴカードの出力コード＞
 
-      #縦のリーチカウンター
+      #横のリーチカウンター
+      #１行目に一致した数値が3つあり、first_count_checkが0ならば
       if first_count > 3 && first_count_check == 0
+        #
         first_count_check = 1
         reach_count += 1
       end
