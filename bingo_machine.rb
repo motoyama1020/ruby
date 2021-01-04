@@ -212,26 +212,29 @@ class Bingo
       #横のリーチカウンター
       #１行目に一致した数値が3つあり、first_count_checkが0ならば
       if first_count > 3 && first_count_check == 0
-        #
         first_count_check = 1
         reach_count += 1
       end
 
+      #2行目に一致した数値が3つあり、second_count_checkが0ならば
       if second_count > 3 && second_count_check == 0
         second_count_check = 1
         reach_count += 1
       end
 
+      #3行目に一致した数値が3つあり、third_count_checkが0ならば
       if third_count > 2 && third_count_check == 0
         third_count_check = 1
         reach_count += 1
       end
 
+      #4行目に一致した数値が3つあり、fourth_count_checkが0ならば
       if fourth_count > 3 && fourth_count_check == 0
         fourth_count_check = 1
         reach_count += 1
       end
 
+      #5行目に一致した数値が3つあり、fifth_count_checkが0ならば
       if fifth_count > 3 && fifth_count_check == 0
         fifth_count_check = 1
         reach_count += 1
