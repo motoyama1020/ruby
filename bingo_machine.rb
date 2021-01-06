@@ -1,6 +1,4 @@
 class Bingo
-  @bingo_card = []
-  @choice_number = []
 
   def initialize
     #1~75の配列を15刻みで区切る
@@ -11,9 +9,9 @@ class Bingo
     #カード中央をFREEという文字に置き換える
     @bingo_card[2][2] = "FREE"
     #1~75の配列を作る
-    choice_number = (1..75).to_a
+    @choice_number = (1..75).to_a
     #配列からランダムに75個の数値を取得する
-    @array_number = choice_number.sample(75)
+    @array_number = @choice_number.sample(75)
   end
 
   def bingo_start
