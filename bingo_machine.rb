@@ -285,14 +285,14 @@ class Bingo
         reach_count += 1
       end
 
-      #斜め(\)の一致カウンター
+      #斜め(\)のリーチカウンター
       #(\)列に一致した数値が3つあり、b_slash_count_checkが0ならば
       if b_slash_count == 3 && b_slash_count_check == 0
         b_slash_count_check = 1
         reach_count += 1
       end
 
-      #斜め(/)の一致カウンター
+      #斜め(/)のリーチカウンター
       #(/)列に一致した数値が3つあり、slash_count_checkが0ならば
       if slash_count == 3 && slash_count_check == 0
         slash_count_check = 1
@@ -303,63 +303,75 @@ class Bingo
       if first_count == 5 && first_bingo_count_check == 0
         first_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if second_count == 5 && second_bingo_count_check == 0
         second_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if third_count == 4 && third_bingo_count_check == 0
         third_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if fourth_count == 5 && fourth_bingo_count_check == 0
         fourth_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if fifth_count == 5 && fifth_bingo_count_check == 0
         fifth_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       #縦のビンゴカウンター
       if b_count == 5 && b_bingo_count_check == 0
         b_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if i_count == 5 && i_bingo_count_check == 0
         i_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if n_count == 4 && n_bingo_count_check == 0
         n_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if g_count == 5 && g_bingo_count_check == 0
         g_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if o_count == 5 && o_bingo_count_check == 0
         o_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       #斜めのリーチカウンター
       if b_slash_count == 4 && b_slash_bingo_count_check == 0
         b_slash_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       if slash_count == 4 && slash_bingo_count_check == 0
         slash_bingo_count_check = 1
         bingo_count += 1
+        reach_count -= 1
       end
 
       #改行
