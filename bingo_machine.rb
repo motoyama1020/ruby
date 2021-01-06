@@ -93,7 +93,7 @@ class Bingo
           x_position += 1
           #カードの数値がボールの数値と一致していたら
           if bingo_ball.include?(n)
-            #カードの数値が一度もチェックされていなかったら
+            #2ゲーム目以降のダブりをカウントしない様に
             unless first_check.include?(n)
               #カードの数値をfirst_checkに入れる
               first_check << n
@@ -380,7 +380,7 @@ class Bingo
       puts "--------------------"
 
       #ビンゴのカウントが1以上になったら終了する
-      if bingo_count > 11
+      if bingo_count > 10
         break
       end
     end
