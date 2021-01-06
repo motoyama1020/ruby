@@ -357,7 +357,7 @@ class Bingo
         reach_count -= 1
       end
 
-      #斜めのリーチカウンター
+      #斜めのビンゴカウンター
       if b_slash_count == 4 && b_slash_bingo == 0
         b_slash_bingo = 1
         bingo_count += 1
