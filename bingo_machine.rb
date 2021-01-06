@@ -15,9 +15,7 @@ class Bingo
   end
 
   def bingo_start
-    #繰り返し数
-    a = 0
-    #game_timeはゲーム数
+    #ゲーム数
     game_time = 0
     #1行目の穴空きカウント
     first_count  = 0
@@ -78,13 +76,13 @@ class Bingo
     #ビンゴカードの数値を入れていく配列
     first_check = []
     #75回繰り返す
-    while a < 75  do
+    while game_time < 75  do
+      #bingo_ball配列に今回引いたボールの番号を入れる
+      bingo_ball << @array_number[game_time]
+      #ゲーム数と今回引いたボールの番号を表示する
+      puts "ball[#{game_time + 1}]:#{bingo_ball[game_time]}"
       #ゲーム数を１ずつ足していく
       game_time += 1
-      #bingo_ball配列に今回引いたボールの番号を入れる
-      bingo_ball << @array_number[a]
-      #ゲーム数と今回引いたボールの番号を表示する
-      puts "ball[#{game_time}]:#{bingo_ball[a]}"
       
       #＜ビンゴカードの出力コード＞
       y_position = 0
@@ -385,8 +383,6 @@ class Bingo
       if bingo_count > 11
         break
       end
-      #繰り返し数に1足す
-      a += 1
     end
   end
 end
