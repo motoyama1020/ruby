@@ -21,20 +21,6 @@ class Bingo
     a = 0
     #game_timeはゲーム数
     game_time = 0
-    #リーチのカウント
-    reach_count = 0
-    #ビンゴのカウント
-    bingo_count = 0
-    #B列の穴空きカウント
-    b_count = 0
-    #I列の穴空きカウント
-    i_count = 0
-    #N列の穴空きカウント
-    n_count = 0
-    #G列の穴空きカウント
-    g_count = 0
-    #O列の穴空きカウント
-    o_count = 0
     #1行目の穴空きカウント
     first_count  = 0
     #2行目の穴空きカウント
@@ -45,36 +31,50 @@ class Bingo
     fourth_count = 0
     #5行目の穴空きカウント
     fifth_count  = 0
+    #B列の穴空きカウント
+    b_count = 0
+    #I列の穴空きカウント
+    i_count = 0
+    #N列の穴空きカウント
+    n_count = 0
+    #G列の穴空きカウント
+    g_count = 0
+    #O列の穴空きカウント
+    o_count = 0
     #\上の穴空きカウント
     b_slash_count = 0
     #/上の穴空きカウント
     slash_count = 0
+    #リーチのカウント
+    reach_count = 0
+    #ビンゴのカウント
+    bingo_count = 0
     #リーチ数がダブらない様に
-    first_count_check  = 0
-    second_count_check = 0
-    third_count_check  = 0
-    fourth_count_check = 0
-    fifth_count_check  = 0
-    b_count_check = 0
-    i_count_check = 0
-    n_count_check = 0
-    g_count_check = 0
-    o_count_check = 0
-    b_slash_count_check = 0
-    slash_count_check = 0
+    first_reach  = 0
+    second_reach = 0
+    third_reach  = 0
+    fourth_reach = 0
+    fifth_reach  = 0
+    b_reach = 0
+    i_reach = 0
+    n_reach = 0
+    g_reach = 0
+    o_reach = 0
+    b_slash_reach = 0
+    slash_reach = 0
     #ビンゴ数がダブらない様に
-    first_bingo_count_check = 0
-    second_bingo_count_check = 0
-    third_bingo_count_check = 0
-    fourth_bingo_count_check = 0
-    fifth_bingo_count_check = 0
-    b_bingo_count_check = 0
-    i_bingo_count_check = 0
-    n_bingo_count_check = 0
-    g_bingo_count_check = 0
-    o_bingo_count_check = 0
-    b_slash_bingo_count_check = 0
-    slash_bingo_count_check = 0
+    first_bingo = 0
+    second_bingo = 0
+    third_bingo = 0
+    fourth_bingo = 0
+    fifth_bingo = 0
+    b_bingo = 0
+    i_bingo = 0
+    n_bingo = 0
+    g_bingo = 0
+    o_bingo = 0
+    b_slash_bingo = 0
+    slash_bingo = 0
     #引いたボールの番号を入れていく配列
     bingo_ball = []
     #ビンゴカードの数値を入れていく配列
@@ -224,152 +224,152 @@ class Bingo
       #＜/ビンゴカードの出力コード＞
 
       #横のリーチカウンター
-      #１行目に一致した数値が4つあり、first_count_checkが0ならば
-      if first_count == 4 && first_count_check == 0
-        first_count_check = 1
+      #１行目に一致した数値が4つあり、first_reachが0ならば
+      if first_count == 4 && first_reach == 0
+        first_reach = 1
         reach_count += 1
       end
 
-      #2行目に一致した数値が4つあり、second_count_checkが0ならば
-      if second_count == 4 && second_count_check == 0
-        second_count_check = 1
+      #2行目に一致した数値が4つあり、second_reachが0ならば
+      if second_count == 4 && second_reach == 0
+        second_reach = 1
         reach_count += 1
       end
 
-      #3行目に一致した数値が3つあり、third_count_checkが0ならば
-      if third_count == 3 && third_count_check == 0
-        third_count_check = 1
+      #3行目に一致した数値が3つあり、third_reachが0ならば
+      if third_count == 3 && third_reach == 0
+        third_reach = 1
         reach_count += 1
       end
 
-      #4行目に一致した数値が4つあり、fourth_count_checkが0ならば
-      if fourth_count == 4 && fourth_count_check == 0
-        fourth_count_check = 1
+      #4行目に一致した数値が4つあり、fourth_reachが0ならば
+      if fourth_count == 4 && fourth_reach == 0
+        fourth_reach = 1
         reach_count += 1
       end
 
-      #5行目に一致した数値が4つあり、fifth_count_checkが0ならば
-      if fifth_count == 4 && fifth_count_check == 0
-        fifth_count_check = 1
+      #5行目に一致した数値が4つあり、fifth_reachが0ならば
+      if fifth_count == 4 && fifth_reach == 0
+        fifth_reach = 1
         reach_count += 1
       end
 
       #縦のリーチカウンター
-      #b列に一致した数値が4つあり、b_count_checkが0ならば
-      if b_count == 4 && b_count_check == 0
-        b_count_check = 1
+      #b列に一致した数値が4つあり、b_reachが0ならば
+      if b_count == 4 && b_reach == 0
+        b_reach = 1
         reach_count += 1
       end
 
-      #i列に一致した数値が4つあり、i_count_checkが0ならば
-      if i_count == 4 && i_count_check == 0
-        i_count_check = 1
+      #i列に一致した数値が4つあり、i_reachが0ならば
+      if i_count == 4 && i_reach == 0
+        i_reach = 1
         reach_count += 1
       end
 
-      #n列に一致した数値が3つあり、n_count_checkが0ならば
-      if n_count == 3 && n_count_check == 0
-        n_count_check = 1
+      #n列に一致した数値が3つあり、n_reachが0ならば
+      if n_count == 3 && n_reach == 0
+        n_reach = 1
         reach_count += 1
       end
 
-      #g列に一致した数値が4つあり、g_count_checkが0ならば
-      if g_count == 4 && g_count_check == 0
-        g_count_check = 1
+      #g列に一致した数値が4つあり、g_reachが0ならば
+      if g_count == 4 && g_reach == 0
+        g_reach = 1
         reach_count += 1
       end
 
-      #o列に一致した数値が4つあり、o_count_checkが0ならば
-      if o_count == 4 && o_count_check == 0
-        o_count_check = 1
+      #o列に一致した数値が4つあり、o_reachが0ならば
+      if o_count == 4 && o_reach == 0
+        o_reach = 1
         reach_count += 1
       end
 
       #斜め(\)のリーチカウンター
-      #(\)列に一致した数値が3つあり、b_slash_count_checkが0ならば
-      if b_slash_count == 3 && b_slash_count_check == 0
-        b_slash_count_check = 1
+      #(\)列に一致した数値が3つあり、b_slash_reachが0ならば
+      if b_slash_count == 3 && b_slash_reach == 0
+        b_slash_reach = 1
         reach_count += 1
       end
 
       #斜め(/)のリーチカウンター
-      #(/)列に一致した数値が3つあり、slash_count_checkが0ならば
-      if slash_count == 3 && slash_count_check == 0
-        slash_count_check = 1
+      #(/)列に一致した数値が3つあり、slash_reachが0ならば
+      if slash_count == 3 && slash_reach == 0
+        slash_reach = 1
         reach_count += 1
       end
 
       #横のビンゴカウンター
-      if first_count == 5 && first_bingo_count_check == 0
-        first_bingo_count_check = 1
+      if first_count == 5 && first_bingo == 0
+        first_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if second_count == 5 && second_bingo_count_check == 0
-        second_bingo_count_check = 1
+      if second_count == 5 && second_bingo == 0
+        second_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if third_count == 4 && third_bingo_count_check == 0
-        third_bingo_count_check = 1
+      if third_count == 4 && third_bingo == 0
+        third_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if fourth_count == 5 && fourth_bingo_count_check == 0
-        fourth_bingo_count_check = 1
+      if fourth_count == 5 && fourth_bingo == 0
+        fourth_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if fifth_count == 5 && fifth_bingo_count_check == 0
-        fifth_bingo_count_check = 1
+      if fifth_count == 5 && fifth_bingo == 0
+        fifth_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
       #縦のビンゴカウンター
-      if b_count == 5 && b_bingo_count_check == 0
-        b_bingo_count_check = 1
+      if b_count == 5 && b_bingo == 0
+        b_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if i_count == 5 && i_bingo_count_check == 0
-        i_bingo_count_check = 1
+      if i_count == 5 && i_bingo == 0
+        i_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if n_count == 4 && n_bingo_count_check == 0
-        n_bingo_count_check = 1
+      if n_count == 4 && n_bingo == 0
+        n_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if g_count == 5 && g_bingo_count_check == 0
-        g_bingo_count_check = 1
+      if g_count == 5 && g_bingo == 0
+        g_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if o_count == 5 && o_bingo_count_check == 0
-        o_bingo_count_check = 1
+      if o_count == 5 && o_bingo == 0
+        o_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
       #斜めのリーチカウンター
-      if b_slash_count == 4 && b_slash_bingo_count_check == 0
-        b_slash_bingo_count_check = 1
+      if b_slash_count == 4 && b_slash_bingo == 0
+        b_slash_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
 
-      if slash_count == 4 && slash_bingo_count_check == 0
-        slash_bingo_count_check = 1
+      if slash_count == 4 && slash_bingo == 0
+        slash_bingo = 1
         bingo_count += 1
         reach_count -= 1
       end
