@@ -114,69 +114,69 @@ class Bingo
               end
 
               #縦の一致カウンター
-              #1列目の数値が該当していたらb_countを+1する
+              #b列目の数値が該当していたらb_countを+1する
               if x_position == 1
                 b_count += 1
               end
 
-              #2列目の数値が該当していたらi_countを+1する
+              #i列目の数値が該当していたらi_countを+1する
               if x_position == 2
                 i_count += 1
               end
 
-              #3列目の数値が該当していたらn_countを+1する
+              #n列目の数値が該当していたらn_countを+1する
               if x_position == 3
                 n_count += 1
               end
 
-              #4列目の数値が該当していたらg_countを+1する
+              #g列目の数値が該当していたらg_countを+1する
               if x_position == 4
                 g_count += 1
               end
 
-              #5列目の数値が該当していたらo_countを+1する
+              #o列目の数値が該当していたらo_countを+1する
               if x_position == 5
                 o_count += 1
               end
 
               #斜め(\)の一致カウンター
-              #座標(1,1)の数値が該当していたらb_slash_countを+1する
+              #座標(1,b)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 1
                 b_slash_count += 1
               end
 
-              #座標(2,2)の数値が該当していたらb_slash_countを+1する
+              #座標(2,i)の数値が該当していたらb_slash_countを+1する
               if y_position == 2 && x_position == 2
                 b_slash_count += 1
               end
 
-              #座標(4,4)の数値が該当していたらb_slash_countを+1する
+              #座標(4,g)の数値が該当していたらb_slash_countを+1する
               if y_position == 4 && x_position == 4
                 b_slash_count += 1
               end
 
-              #座標(5,5)の数値が該当していたらb_slash_countを+1する
+              #座標(5,o)の数値が該当していたらb_slash_countを+1する
               if y_position == 5 && x_position == 5
                 b_slash_count += 1
               end
 
               #斜め(/)の一致カウンター
-              #座標(5,1)の数値が該当していたらb_slash_countを+1する
+              #座標(5,b)の数値が該当していたらb_slash_countを+1する
               if y_position == 1 && x_position == 5
                 slash_count += 1
               end
 
-              #座標(4,2)の数値が該当していたらb_slash_countを+1する
+              #座標(4,i)の数値が該当していたらb_slash_countを+1する
               if y_position == 2 && x_position == 4
                 slash_count += 1
               end
 
-              #座標(2,4)の数値が該当していたらb_slash_countを+1する
+              #座標(2,g)の数値が該当していたらb_slash_countを+1する
               if y_position == 4 && x_position == 2
                 slash_count += 1
               end
 
-              #座標(1,5)の数値が該当していたらb_slash_countを+1する
+              #座標(1,o)の数値が該当していたらb_slash_countを+1する
               if y_position == 5 && x_position == 1
                 slash_count += 1
               end
@@ -210,13 +210,13 @@ class Bingo
       #＜/ビンゴカードの出力コード＞
 
       #横のリーチカウンター
-      #１行目に一致した数値が3つあり、first_count_checkが0ならば
+      #１行目に一致した数値が4つあり、first_count_checkが0ならば
       if first_count > 3 && first_count_check == 0
         first_count_check = 1
         reach_count += 1
       end
 
-      #2行目に一致した数値が3つあり、second_count_checkが0ならば
+      #2行目に一致した数値が4つあり、second_count_checkが0ならば
       if second_count > 3 && second_count_check == 0
         second_count_check = 1
         reach_count += 1
@@ -228,50 +228,58 @@ class Bingo
         reach_count += 1
       end
 
-      #4行目に一致した数値が3つあり、fourth_count_checkが0ならば
+      #4行目に一致した数値が4つあり、fourth_count_checkが0ならば
       if fourth_count > 3 && fourth_count_check == 0
         fourth_count_check = 1
         reach_count += 1
       end
 
-      #5行目に一致した数値が3つあり、fifth_count_checkが0ならば
+      #5行目に一致した数値が4つあり、fifth_count_checkが0ならば
       if fifth_count > 3 && fifth_count_check == 0
         fifth_count_check = 1
         reach_count += 1
       end
 
-      # 横のリーチカウンター
+      #縦のリーチカウンター
+      #b列に一致した数値が4つあり、b_count_checkが0ならば
       if b_count > 3 && b_count_check == 0
         b_count_check = 1
         reach_count += 1
       end
 
+      #i列に一致した数値が4つあり、i_count_checkが0ならば
       if i_count > 3 && i_count_check == 0
         i_count_check = 1
         reach_count += 1
       end
 
+      #n列に一致した数値が3つあり、n_count_checkが0ならば
       if n_count > 2 && n_count_check == 0
         n_count_check = 1
         reach_count += 1
       end
 
+      #g列に一致した数値が4つあり、g_count_checkが0ならば
       if g_count > 3 && g_count_check == 0
         g_count_check = 1
         reach_count += 1
       end
 
+      #o列に一致した数値が4つあり、o_count_checkが0ならば
       if o_count > 3 && o_count_check == 0
         o_count_check = 1
         reach_count += 1
       end
 
-      # 斜めのリーチカウンター
+      #斜め(\)の一致カウンター
+      #(\)列に一致した数値が3つあり、b_slash_count_checkが0ならば
       if b_slash_count > 2 && b_slash_count_check == 0
         b_slash_count_check = 1
         reach_count += 1
       end
 
+      #斜め(/)の一致カウンター
+      #(/)列に一致した数値が3つあり、slash_count_checkが0ならば
       if slash_count > 2 && slash_count_check == 0
         slash_count_check = 1
         reach_count += 1
