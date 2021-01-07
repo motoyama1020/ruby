@@ -16,7 +16,7 @@ class Bingo
 
   def bingo_start
     #ゲーム数
-    game_time = 0
+    game_time    = 0
     #1行目の穴空きカウント
     first_count  = 0
     #2行目の穴空きカウント
@@ -40,11 +40,11 @@ class Bingo
     #\上の穴空きカウント
     b_slash_count = 0
     #/上の穴空きカウント
-    slash_count = 0
+    slash_count   = 0
     #リーチのカウント
-    reach_count = 0
+    reach_count   = 0
     #ビンゴのカウント
-    bingo_count = 0
+    bingo_count  = 0
     #リーチ数がダブらない様に
     first_reach  = 0
     second_reach = 0
@@ -57,22 +57,22 @@ class Bingo
     g_reach = 0
     o_reach = 0
     b_slash_reach = 0
-    slash_reach = 0
+    slash_reach =   0
     #ビンゴ数がダブらない様に
-    first_bingo = 0
+    first_bingo  = 0
     second_bingo = 0
-    third_bingo = 0
+    third_bingo  = 0
     fourth_bingo = 0
-    fifth_bingo = 0
+    fifth_bingo  = 0
     b_bingo = 0
     i_bingo = 0
     n_bingo = 0
     g_bingo = 0
     o_bingo = 0
     b_slash_bingo = 0
-    slash_bingo = 0
+    slash_bingo   = 0
     #引いたボールの番号を入れていく配列
-    bingo_ball = []
+    bingo_ball  = []
     #ビンゴカードの数値を入れていく配列
     first_check = []
     #75回繰り返す
@@ -203,14 +203,12 @@ class Bingo
             #FREE該当時のFREE文字の表示
             if n == "FREE"
               print "FREE"
+            elsif n < 10
+              #該当なしの場合,10より小さい数値は前に0＆後ろに空白を入れる
+              print n.to_s.rjust(3, " 0") + " "
             else
-              if n < 10
-                #該当なしの場合,10より小さい数値は前に0＆後ろに空白を入れる
-                print n.to_s.rjust(3, " 0") + " "
-              else
-                #該当なしの場合,10以上の数値は前後に空白を入れる
-                print n.to_s.rjust(3, " ") + " "
-              end
+              #該当なしの場合,10以上の数値は前後に空白を入れる
+              print n.to_s.rjust(3, " ") + " "
             end
           end
         end
