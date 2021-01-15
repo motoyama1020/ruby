@@ -11,7 +11,7 @@ class Bingo
     #1~75の配列を作る
     @choice_number = (1..75).to_a
     #配列からランダムに75個の数値を取得する
-    @array_number = @choice_number.sample(75)
+    @ball_number = @choice_number.sample(75)
   end
 
   def bingo_start
@@ -78,7 +78,7 @@ class Bingo
     #75回繰り返す
     while game_time < 75  do
       #bingo_ball配列に今回引いたボールの番号を入れる
-      bingo_ball << @array_number[game_time]
+      bingo_ball << @ball_number[game_time]
       #ゲーム数と今回引いたボールの番号を表示する
       puts "ball[#{game_time + 1}]:#{bingo_ball[game_time]}"
       #ゲーム数を１ずつ足していく
