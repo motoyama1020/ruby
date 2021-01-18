@@ -8,10 +8,8 @@ class Bingo
     end
     #カード中央をFREEという文字に置き換える
     @bingo_card[2][2] = "FREE"
-    #1~75の配列を作る
-    @choice_number = (1..75).to_a
-    #配列からランダムに75個の数値を取得する
-    @ball_number = @choice_number.sample(75)
+    #1~75の配列を作り、ランダムに数値を取得
+    @ball_number = (1..75).to_a.sample(75)
   end
 
   def bingo_start
@@ -377,7 +375,7 @@ class Bingo
       #区切り線の表示
       puts "--------------------"
 
-      #ビンゴのカウントが11以上になったら終了する
+      #ビンゴのカウントが10以上になったら終了する
       if bingo_count > 10
         break
       end
